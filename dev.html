@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodCraft Soft - Studio de Développement Web</title>
+  <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="code.jpeg" type="image/x-icon">
+  <style>
+.liste-chainee {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.icone {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone.html { background-color: #E34C26; }
+.icone.css { background-color: #264DE4; }
+.icone.django { background-color: #092E20; }
+.icone.python { background-color: #3572A5; }
+.icone.php { background-color: #4F5D95; }
+.icone.react { background-color: #61DAFB; }
+.icone.flutter { background-color: #02569B; }
+.icone.vue { background-color: #42B883; }
+.icone.angular { background-color: #DD1B16; }
+
+.icone i {
+    color: white;
+    font-size: 24px;
+}
+
+    /* Styles personnalisés */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+
+    }
+    .navbar {
+      background-color: dark;
+
+    }
+.navbar-brand img {
+      width: 160px;
+      height: 140px;
+border-radius: 5cm;
+border: 5px solid green;
+
+    }
+    .navbar-brand {
+      font-size: 1.5rem;
+
+      color: #fff;
+      animation: fadeInDown 1s ease-out;
+    }
+    .navbar-nav .nav-link {
+      color: #007bff;
+font-size: 1rem;
+ font-weight: bold;
+      animation: fadeInUp 1s ease-out;
+    }
+    .section-title {
+      color: #007bff;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      position: relative;
+      font-weight: bold;
+      animation: fadeInUp 1s ease-out;
+    }
+    .section-title::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: #007bff;
+      animation: slideIn 1s ease-out;
+    }
+    .card {
+      border: none;
+      transition: transform 0.3s ease;
+
+    }
+.contact-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .feature-icon {
+      font-size: 3rem;
+      color: #007bff;
+      animation: rotateIn 1s ease-out;
+    }
+    .footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      animation: slideInUp 1s ease-out;
+    }
+ #point {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9999;
+  }
+    .btn-back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      z-index: 1000;
+    }
+.btn-horaires {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+.social-button {
+
+ 
+
+    display: inline-block;
+
+    width: 40px; /* Largeur de chaque bouton social */
+
+    height: 40px; /* Hauteur de chaque bouton social */
+
+    margin-right: 10px; /* Marge de 10px entre chaque bouton */
+
+    border-radius: 50%; /* Bords arrondis pour créer des boutons circulaires */
+
+   
+    color: #fff; /* Couleur du texte des boutons */
+
+    text-align: center; /* Centrer le contenu du bouton */
+
+    line-height: 40px; /* Centrer verticalement le contenu du bouton */
+
+    transition: background-color 0.3s ease; /* Animation de transition */
+
+
+
+}
+
+ 
+   
+.span{
+color: green;
+font-weight: bold;
+}
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideIn {
+      from {
+        width: 0;
+      }
+      to {
+        width: 50px;
+      }
+    }
+    @keyframes rotateIn {
+      from {
+        transform: rotate(-360deg);
+      }
+      to {
+        transform: rotate(0);
+      }
+    }
+    @keyframes slideInUp {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+.card-img-top{
+height: 9cm;
+width: auto;
+}
+.d{
+color: black;
+}
+  </style>
+</head>
+<body>
+<body class="page-border">
+
+<!-- Boîte modale pour le formulaire de connexion -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Connexion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="login.php" method="post">
+            <div class="form-group">
+                <label for="loginUsername">Nom d'utilisateur ou Email:</label>
+                <input type="text" class="form-control" id="loginUsername" name="loginUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Mot de passe:</label>
+                <input type="password" class="form-control" id="loginPassword" name="loginPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Boîte modale pour le formulaire d'inscription -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Inscription</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="inscription.php" method="post">
+            <div class="form-group">
+                <label for="signupUsername">Nom d'utilisateur:</label>
+                <input type="text" class="form-control" id="signupUsername" name="signupUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="signupEmail">Email:</label>
+                <input type="email" class="form-control" id="signupEmail" name="signupEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="signupPassword">Mot de passe:</label>
+                <input type="password" class="form-control" id="signupPassword" name="signupPassword" required>
+            </div>
+            <button type="submit" class="btn btn-success">S'inscrire</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Privacy Policy Modal -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="privacyModalLabel">Privacy Policy and Terms of Use</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="display: none;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6>Privacy Policy</h6>
+        <h3>Collection and Use of Information</h3>
+        <p>We collect and process the following types of information:<br>
+            - Information you voluntarily provide to us by filling out forms on our website, such as your name, email address, and phone number.<br>
+            - Information you provide when you communicate with us via email or other means.<br>
+            - Information about your use of our website, collected using cookies or similar technologies.<br>
+            We use your information to:<br>
+            - Respond to your inquiries and provide you with the information you requested.<br>
+            - Send you marketing communications, if you have agreed to receive them.<br>
+            - Improve our website and personalize your user experience.</p>
+        <h3>Information Sharing</h3>
+        <p>We will not sell or rent your personal information to third parties without your consent. However, we may share your information with trusted third parties who assist us in operating our website or providing services on our behalf, in accordance with Togolese data protection legislation.</p>
+        <h3>Information Security</h3>
+        <p>We are committed to ensuring the security of your information in accordance with applicable laws in Togo. We use appropriate technical and organizational measures to protect your information against loss, misuse, and unauthorized access.</p>
+        <h3>Your Rights</h3>
+        <p>You have the right to request access, rectification, and deletion of your personal information in accordance with Togolese data protection legislation. You can also object to the processing of your information for direct marketing purposes.<br>
+        To exercise these rights or ask questions about our privacy policy, please contact us at [contact email].</p>
+
+        
+        
+        <h6>Terms of Use</h6>
+        <p>By using our website, you agree to these terms of use. If you do not agree to these terms, please do not use our site.<br>
+          <h3>Intellectual Property Rights</h3>
+          <p>The content of this website, including but not limited to text, images, graphics, and source code, is the property of [ccs] and is protected by Togolese copyright laws.</p>
+          <h3>Acceptable Use</h3>
+          <p>You agree to use our website only for lawful purposes and in accordance with these terms of use. You agree not to use our website in a way that violates applicable laws of Togo or harms others.</p>
+          <h3>Limitation of Liability</h3>
+          <p>We strive to keep our website up-to-date and accessible, but we do not guarantee its accuracy, completeness, or availability in accordance with Togolese laws. We will not be liable for any direct, indirect, incidental, or consequential damages arising from your use of our website.</p>
+          <h3>Changes to the Terms</h3>
+          <p>We reserve the right to modify these terms of use at any time in accordance with applicable laws in Togo. Changes will be effective upon posting on our website. We encourage you to regularly review these terms to stay informed of changes.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="acceptButton">I Accept</button>
+      </div>
+    </div>
+  </div>
+</div>                                                                                                      
+
+
+<!-- Modale de Félicitations -->
+<div class="modal fade" id="congratsModal" tabindex="-1" aria-labelledby="congratsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <h5 class="modal-title" id="congratsModalLabel">Congratulations! You have accepted our privacy policy</h5>
+        <div class="mt-3">
+          <i class="fas fa-hands-clapping fa-3x"></i>
+          <i class="fas fa-hands-clapping fa-3x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Lorsque la page est chargée, afficher la modale de politique de confidentialité
+    $('#privacyModal').modal({
+      backdrop: 'static', // Empêche la fermeture en cliquant à l'extérieur
+      keyboard: false     // Empêche la fermeture en appuyant sur la touche Esc
+    }).modal('show');
+    
+    // Fonction pour gérer l'événement de pression de la touche "Entrée" ou "Flèche droite"
+    function handleEnterOrRightArrowKey(event) {
+      if (event.keyCode === 13 || event.keyCode === 39) {
+        $('#acceptButton').trigger('click'); // Déclencher le clic sur le bouton "J'accepte"
+      }
+    }
+
+    // Lorsque l'utilisateur clique sur le bouton "J'accepte"
+    $('#acceptButton').click(function() {
+      // Cacher la modale de politique de confidentialité
+      $('#privacyModal').modal('hide');
+      // Afficher la modale de félicitations
+      $('#congratsModal').modal('show');
+      // Masquer automatiquement la modale de félicitations après 2 secondes
+      setTimeout(function() {
+        $('#congratsModal').modal('hide');
+      }, 1000);
+    });
+
+    // Écouter l'événement de pression de la touche "Entrée" ou "Flèche droite" sur la fenêtre
+    $(window).on('keydown', handleEnterOrRightArrowKey);
+  });
+</script>
+<!-- Modal to display opening hours -->
+<div class="modal fade" id="horairesModal" tabindex="-1" role="dialog" aria-labelledby="horairesModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="horairesModalLabel">Our opening hours</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="horairesBody">
+                <!-- Opening hours content will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Opening hours
+    const horaires = {
+        monday: { opening: '07:30', lunchClosure: '12:30', afternoonOpening: '14:30', closure: '17:30' },
+        tuesday: { opening: '07:30', lunchClosure: '12:30', afternoonOpening: '14:30', closure: '17:30' },
+        wednesday: { opening: '07:30', lunchClosure: '12:30', afternoonOpening: '14:30', closure: '17:30' },
+        thursday: { opening: '07:30', lunchClosure: '12:30', afternoonOpening: '14:30', closure: '17:30' },
+        friday: { opening: '07:30', lunchClosure: '12:30', afternoonOpening: '14:30', closure: '17:30' },
+        saturday: { opening: '', closure: '' }, // Closed day
+        sunday: { opening: '', closure: '' } // Closed day
+    };
+
+    // Function to get the status (open or closed) based on the current time
+    function obtainStatus() {
+        const date = new Date();
+        const day = date.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
+        const currentTime = date.getHours() + ':' + (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+
+        const schedule = horaires[day];
+        if (schedule.opening === '' && schedule.closure === '') {
+            return 'Closed';
+        } else if ((currentTime >= schedule.opening && currentTime < schedule.lunchClosure) ||
+                   (currentTime >= schedule.afternoonOpening && currentTime <= schedule.closure)) {
+            return 'Open';
+        } else {
+            return 'Closed';
+        }
+    }
+
+    // Function to display opening hours with current status
+    function displayOpeningHours() {
+        let message = '';
+        Object.keys(horaires).forEach(day => {
+            const schedule = horaires[day];
+            message += `<p>${day.charAt(0).toUpperCase() + day.slice(1)} ${schedule.opening === '' ? 'Closed' : schedule.opening} — ${schedule.closure === '' ? 'Closed' : schedule.closure}</p>`;
+        });
+        
+        // Get current status
+        const status = obtainStatus();
+        let buttonColor = '';
+        if (status === 'Open') {
+            buttonColor = 'btn-success';
+        } else if (status === 'Closed') {
+            buttonColor = 'btn-danger';
+        }
+        
+        // Add status button
+        message += `<button type="button" class="btn ${buttonColor} float-right">${status}</button>`;
+        
+        $('#horairesBody').html(message);
+    }
+
+    // Display opening hours on page load and refresh every minute
+    $(document).ready(function() {
+        displayOpeningHours();
+        setInterval(displayOpeningHours, 60000);
+    });
+</script>
+
+<div id="point"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var point = document.getElementById('point');
+    document.addEventListener('mousemove', function(e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        point.style.left = x + 'px';
+        point.style.top = y + 'px';
+    });
+});
+</script>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-blue bg-whitesmoke">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="code.jpeg" alt="Logo"></a><h2 class="span">SOFT</h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+       
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">À Propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Notre Équipe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact"><i class="fa fa-phone"></i>Contact</a>
+          </li>
+        </ul>
+<!-- FAB Button for polls -->
+      
+    <!-- Bouton pour ouvrir la modale de connexion -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal"><i class="fas fa-sign-in-alt"></i></button>
+
+<!-- Bouton pour ouvrir la modale d'inscription -->
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#signupModal"><i class="fas fa-user-plus"></i></button>
+      
+ <button id="btnHoraires" class="btn btn-horaires btn-lg mb-2" data-toggle="modal" data-target="#horairesModal"><i class="fas fa-clock"></i></button>
+</div>
+    </div>
+  </nav>
+<!-- Header -->
+<header class="bg-info text-white text-center py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="display-4">Bienvenue chez CodCraft Soft</h1>
+        <p class="lead">Votre partenaire pour des solutions web innovantes</p>
+      </div>
+      <div class="col-md-4">
+        <!-- Intégration de la carte de Vakpossito, Togo -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9867632250925!2d1.2169963142100734!3d6.537738825311404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe111c20142b8647%3A0x29cc94b0075bacef!2sVakpossito%2C%20Togo!5e0!3m2!1sen!2sus!4v1622799992889!5m2!1sen!2sus" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+  <!-- À Propos -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">À Propos de Nous</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <p>CodCraft Soft, éminent dans le domaine du développement web, élabore avec maestria des sites et des applications novateurs afin de combler les attentes de notre distinguée clientèle avec ardeur et minutie. Notre vocation ? Concevoir des plateformes web et des applications qui non seulement satisfont les exigences de nos clients, mais les surpassent, les ravissent et les inspirent. Nous sommes fermement convaincus que chaque projet représente une opportunité d'édifier quelque chose d'exceptionnel. C'est pourquoi nous nous engageons à appréhender avec une profondeur singulière les aspirations et les valeurs de nos clients, dans le but de traduire leur vision en une réalité numérique captivante. Forts de notre expertise technique, de notre créativité sans borne et de notre quête incessante d'excellence, nous sommes en mesure de concevoir des solutions sur mesure qui se distinguent dans un univers numérique en perpétuelle évolution.
+</p>
+        </div>
+        <div class="col-lg-6">
+         
+            <img src="webi.jpeg" class="card-img-top" alt="">
+      </div>
+    </div>
+<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="liste-chainee">
+                    <div class="icone html"><i class="fab fa-html5"></i></div>
+                    <div class="icone css"><i class="fab fa-css3-alt"></i></div>
+                    <div class="icone django"><i class="fab fa-python"></i></div>
+                    <div class="icone python"><i class="fab fa-python"></i></div>
+                    <div class="icone php"><i class="fab fa-php"></i></div>
+                    <div class="icone react"><i class="fab fa-react"></i></div>
+                
+<div class="icon flutter">
+  <img src="lm.jpeg" alt="Logo Flutter">
+</div>
+
+                    <div class="icone vue"><i class="fab fa-vuejs"></i></div>
+                    <div class="icone angular"><i class="fab fa-angular"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+<style>
+  .icon.flutter img {
+    width: 28px; /* Taille similaire à celle d'une icône FontAwesome */
+    height: 27px;
+  }
+</style>
+
+  <!-- Services -->
+  <section id="services" class="bg-light py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Nos Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <i class="fas fa-laptop-code feature-icon mb-3"></i>
+              <h3 class="card-title">Conception Web</h3>
+              <p class="card-text">Conception de sites web sur mesure</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt feature-icon mb-3"></i>
+              <h3 class="card-title">Développement Frontend</h3>
+              <p class="card-text">Interfaces utilisateur interactives</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <i class="fas fa-server feature-icon mb-3"></i>
+              <h3 class="card-title">Développement Backend</h3>
+              <p class="card-text">Solutions robustes et évolutives</p>
+            </div>
+          </div>
+        </div>
+<div class="col-md-4">
+  <div class="card mb-4">
+    <div class="card-body text-center">
+      <i class="fas fa-mobile feature-icon mb-3"></i>
+      <h3 class="card-title">Développement Mobile</h3>
+      <p class="card-text">Applications mobiles pour iOS et Android</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card mb-4">
+    <div class="card-body text-center">
+      <i class="fas fa-paint-brush feature-icon mb-3"></i>
+      <h3 class="card-title">Graphisme</h3>
+      <p class="card-text">Conception graphique personnalisée pour divers supports</p>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div class="card mb-4">
+    <div class="card-body text-center">
+      <i class="fas fa-chart-pie feature-icon mb-3"></i>
+      <h3 class="card-title">Infographie</h3>
+      <p class="card-text">Création d'infographies attrayantes pour la visualisation des données</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card mb-4">
+    <div class="card-body text-center">
+      <i class="fas fa-file-word feature-icon mb-3"></i>
+      <h3 class="card-title">Formation Word</h3>
+      <p class="card-text">Formation complète sur l'utilisation efficace de Microsoft Word</p>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div class="card mb-4">
+    <div class="card-body text-center">
+      <i class="fas fa-file-excel feature-icon mb-3"></i>
+      <h3 class="card-title">Formation Excel</h3>
+      <p class="card-text">Formation avancée sur les fonctionnalités de Microsoft Excel</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card mb-4">
+    <div class="card-body text-center">
+      <i class="fas fa-video feature-icon mb-3"></i>
+      <h3 class="card-title">Montage Vidéo</h3>
+      <p class="card-text">Montage professionnel pour vos vidéos</p>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Équipe -->
+  <section id="team" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Notre Équipe</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="joo.jpg" class="card-img-top" alt="John Doe">
+            <div class="card-body text-center">
+              <h5 class="card-title">John Doe</h5>
+              <p class="card-text">Développeur Full Stack</p>
+ <a href="https://linkedin.com/in/eclaireursdeleducation" class="social-button linkedin bg-blue"><i class="fab fa-linkedin-in"></i></a>
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">En savoir plus</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="joo.jpg" class="card-img-top" alt="Jane Doe">
+            <div class="card-body text-center">
+              <h5 class="card-title">Jane Doe</h5>
+              <p class="card-text">Designer UX/UI</p>
+ <a href="https://linkedin.com/in/eclaireursdeleducation" class="social-button linkedin bg-blue"><i class="fab fa-linkedin-in"></i></a>
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">En savoir plus</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="joo.jpg" class="card-img-top" alt="Alice Smith">
+            <div class="card-body text-center">
+              <h5 class="card-title">Jonathan AKOUTA</h5>
+              <p class="card-text">Développeur Frontend</p>
+   <a href="https://linkedin.com/in/eclaireursdeleducation" class="social-button linkedin bg-green"><i class="fab fa-linkedin-in"></i></a>
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal3">En savoir plus</button>
+            </div>
+          </div>
+        </div>
+<div class="col-md-4">
+          <div class="card mb-4">
+            <img src="joo.jpg" class="card-img-top" alt="John Doe">
+            <div class="card-body text-center">
+              <h5 class="card-title">Joseph AKOUTA</h5>
+              <p class="card-text">Formateur Word/Excel</p>
+ <a href="https://linkedin.com/in/eclaireursdeleducation" class="social-button linkedin bg-blue"><i class="fab fa-linkedin-in"></i></a>
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal4">En savoir plus</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Modale pour plus d'informations -->
+
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="modal1Label">Plus d'informations sur le Developpeur Full Stack</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    <span aria-hidden="true">&times;</span>
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <!-- Contenu de la modale -->
+
+                <p>Informations détaillées sur le developpeur Full Stack.</p>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+ 
+
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="modal2Label">Plus d'informations sur le Designer UX/UI</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    <span aria-hidden="true">&times;</span>
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <!-- Contenu de la modale -->
+
+                <p>Informations détaillées sur l'Designer UX/UI</p>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+ 
+
+<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="modal3Label">Plus d'informations sur le Développeur Frontend</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    <span aria-hidden="true">&times;</span>
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <!-- Contenu de la modale -->
+
+                <p>Informations détaillées sur l'Développeur Frontend</p>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="modal4Label" aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="modal4Label">Plus d'infos </h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    <span aria-hidden="true">&times;</span>
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <!-- Contenu de la modale -->
+
+                <p></p>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    
+    
+<!-- Section de contact -->
+<section id="contact" class="bg-whitesmoke py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-5 section-title">Contactez-nous</h2>
+
+        <div class="row">
+
+            <div class="col-md-6 mx-auto">
+
+                <form id="contact-form">
+
+                    <div class="form-group">
+
+                        <label for="name">Nom</label>
+
+                        <input type="text" class="form-control" id="name">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="email">Email</label>
+
+                        <input type="email" class="form-control" id="email">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="message">Message</label>
+
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary">Envoyer</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script> document.addEventListener("DOMContentLoaded", function() {
+        var form = document.getElementById("contact-form");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêcher le formulaire de se soumettre normalement
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Validation des champs
+            if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+                alert("Veuillez remplir tous les champs du formulaire.");
+                return;
+            }
+
+            // Construction du corps de l'e-mail
+            var body = "Nom: " + name + "\n" +
+                       "Email: " + email + "\n" +
+                       "Message: " + message;
+
+            // Envoi des données par e-mail
+            var destinataire = "akoutakatemba@gmail.com";
+            var sujet = "Nouveau message de contact depuis le site";
+            var mailtoLink = "mailto:" + destinataire + "?subject=" + encodeURIComponent(sujet) + "&body=" + encodeURIComponent(body);
+
+            // Tentative d'envoi de l'e-mail
+            var emailWindow = window.open(mailtoLink);
+            if (emailWindow && !emailWindow.closed) {
+                // Si la fenêtre de messagerie est ouverte, afficher le message de succès
+                alert("Votre message a été envoyé avec succès. Nous vous contacterons bientôt.");
+                form.reset();
+            } else {
+                // Si l'envoi a échoué, afficher un message d'erreur
+                alert("L'envoi du message a échoué. Veuillez réessayer plus tard.");
+            }
+        });
+    });
+</script>
+
+
+ <!-- Footer -->
+<footer class="footer">
+    <div class="row mt-3">
+        
+        <div class="col-md-4">
+            <h5 class="section-title">Follow us</h5>
+            <a href="https://facebook.com/eclaireursdeleducation" class="social-button facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/eclaireurseduc" class="social-button twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/eclaireursdeleducation" class="social-button linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/eclaireursdeleducation" class="social-button instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="col-md-4">
+            <h5 class="section-title">Contact</h5>
+            <div class="contact-info">
+                <p class="d"><i class="fas fa-map-marker-alt"></i> Adresse: Vakpossito-Catholique, Lomé, Togo</p>
+                <p class="d"><i class="fas fa-phone"></i> Téléphone: +228 91 36 8350</p>
+                <p class="d"><i class="fas fa-envelope"></i> Email: CodeCraft23@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h5 class="section-title">Notre emplacement</h5>
+            <div class="map-container" style="height: 200px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9867632250925!2d1.2169963142100734!3d6.537738825311404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe111c20142b8647%3A0x29cc94b0075bacef!2sVakpossito%2C%20Togo!5e0!3m2!1sen!2sus!4v1622799992889!5m2!1sen!2sus" 
+                    width="50%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+
+  <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="liste-chainee">
+                    <div class="icone python"><i class="fab fa-python"></i></div>
+                    <div class="icone php"><i class="fab fa-php"></i></div>
+                    <div class="icone html"><i class="fab fa-html5"></i></div>
+                    <div class="icone node"><i class="fab fa-node-js"></i></div>
+                    <!-- Ajoutez d'autres langages ici -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <p class="text-muted">&copy; 2024 CodeCraft Soft - Tous droits réservés</p>
+    </div>
+</footer>
+
+
+  <!-- Bouton Retour en Haut -->
+  <button class="btn btn-info btn-back-to-top" onclick="topFunction()" id="myBtn" title="Retour en Haut"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- jQuery, Popper.js, Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Affiche le bouton "retour en haut" lorsque l'utilisateur descend la page de 20px
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    // Lorsque l'utilisateur clique sur le bouton, retourne en haut de la page
+    function topFunction() {
+      document.body.scrollTop = 0; // Pour Safari
+      document.documentElement.scrollTop = 0; // Pour Chrome, Firefox, IE et Opera
+    }
+  </script>
+</body>
+</html>
